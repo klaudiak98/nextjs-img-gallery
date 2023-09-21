@@ -9,7 +9,6 @@ export default async function Gallery() {
     const images: ImagesResults | undefined = await fetchImages(url);
 
     if (!images) return <h2 className="m-4 text-2xl font-bold">No images found</h2>
-
     const photosWithBlur = await addBlurredDataUrls(images)
 
   return (
